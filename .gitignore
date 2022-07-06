@@ -1,0 +1,9 @@
+выполнение*
+Тестовое задание отдел Форматов СПБ ДНС*
+venv/
+/.env
+.idea
+t_sales.csv
+t_branches.csv
+t_cities.csv
+t_products.csv
