@@ -4,8 +4,11 @@ analiz_csv
 ----
 #### 1)Установить виртуальное окружение:
 python -m venv venv
+
 venv\Scripts\activate
+
 pip install -r requirements.txt
+
 #### 2)Создание базы данных. Если именяете параметры бд, тогда измените config_base в main.py. 
 ####Пример создания через psql:
 create database dns;
@@ -36,6 +39,7 @@ python main.py
 ![image](https://user-images.githubusercontent.com/42601425/177816981-419de922-5057-4507-9114-931817dd4687.png)
 #### 4) "Дополнительное задание, Расчетная часть" реализуется в методе create_and_export. Таблицы импортированы, основные индексы созданы. 
 SELECT * FROM pg_indexes WHERE tablename in ('branches', 'cities', 'products', 'quantile', 'sales');
+
 SELECT * FROM pg_tables p where p.tablename in ('branches', 'cities', 'products', 'quantile', 'sales');
 #### 5) "Будет плюсом, если" 
 -	скрипты будут фиксировать время выполнения; - реализовано при помощи декоратора timer
