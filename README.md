@@ -7,6 +7,10 @@ python -m venv venv
 
 venv\Scripts\activate
 
+git clone https://github.com/proxisty/analiz_csv.git
+
+cd analiz_csv
+
 pip install -r requirements.txt
 
 #### 2)Создание базы данных. Если именяете параметры бд, тогда измените config_base в main.py. 
@@ -25,14 +29,14 @@ GRANT ALL PRIVILEGES ON DATABASE dns TO dns;
 
 grant pg_read_server_files to dns;  
 
-#### 3)Переместите файлы t_branches.csv, t_cities.csv, t_products.csv, t_sales.csv в корень проекта. Для изменения пути к файлам измените path_csv_files в main.py
-#### 4)Запускаем исполняемый файл:
+#### 3)Переместите файлы t_branches.csv, t_cities.csv, t_products.csv, t_sales.csv в корень проекта, где main.py. Для изменения пути к файлам измените path_csv_files в main.py
+#### 4)Запускаем исполняемый файл и ждем первого вывода в консоль в среднем после 2 минут:
 python main.py
 
 ----
 Демонстрация:
 #### 1) "Аналитическая часть" #1 и #2 реализуется в методе complete_analytical_tasks. Реализована запросами к бд.
-#### 2) "Аналитическая часть" #3 реализуется в методе complete_analytical_tasks3 при помощи pandas и matplotlib. В последствии последовательно выводятся графики:
+#### 2) "Аналитическая часть" #3 реализуется в методе complete_analytical_tasks3 при помощи pandas и matplotlib. В последствии последовательно выводятся графики (Для последующего выполнения программы гистограмму необходимо закрыть!):
 ![image](https://user-images.githubusercontent.com/42601425/177815753-3761acbf-0dc1-49d7-acc7-09b5f54bfd12.png)
 ![image](https://user-images.githubusercontent.com/42601425/177816221-60de0e36-e15f-4165-b1be-bad47d16d477.png)
 #### 3) "Расчетная часть" #3 реализуется в методе execute_spreadsheet. В последствии в бд создается таблица quantile:
