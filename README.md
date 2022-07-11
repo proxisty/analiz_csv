@@ -51,3 +51,5 @@ SELECT * FROM pg_tables p where p.tablename in ('branches', 'cities', 'products'
 -	задачи будут решены с помощью Python; - +
 -	задачи будут решены с использованием пакета pandas; - +
 -	задачи будут решены с использованием sql-запросов к базе данных postgres. - +
+
+s
